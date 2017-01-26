@@ -5,13 +5,14 @@
  */
 package es.cifpcm.queenair.pojos;
 
+import java.io.Serializable;
 import java.sql.Time;
 
 /**
  *
  * @author macar
  */
-public class GenericFlight {
+public class GenericFlight implements Serializable {
     private Integer flightNumber;
     private Time departureHour;
     private Time arrivalHour;

@@ -5,13 +5,14 @@
  */
 package es.cifpcm.queenair.pojos;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
  *
  * @author macar
  */
-public class Flight {
+public class Flight implements Serializable {
     private Date day;
     private Integer freePlaces;
     private GenericFlight genericFlight; //Es la clave primaria

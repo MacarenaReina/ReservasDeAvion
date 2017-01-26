@@ -5,11 +5,13 @@
  */
 package es.cifpcm.queenair.pojos;
 
+import java.io.Serializable;
+
 /**
  *
  * @author macar
  */
-public class Bookings {
+public class Bookings implements Serializable {
     private Integer numBooking;
     private String name;
     private String surname;
