@@ -7,8 +7,10 @@ package es.cifpcm.queenair.connection;
 
 import es.cifpcm.queenair.impl.MySqlBookingsDao;
 import es.cifpcm.queenair.impl.MySqlFlightDao;
+import es.cifpcm.queenair.impl.MySqlGenericFlightDao;
 import es.cifpcm.queenair.interfaces.BookingsDao;
 import es.cifpcm.queenair.interfaces.FlightDao;
+import es.cifpcm.queenair.interfaces.GenericFlightDao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.naming.InitialContext;
@@ -53,6 +55,10 @@ public class DaoFactory implements ConnectionProvider {
     
     public FlightDao getFlightDao() {
         return new MySqlFlightDao(this);
+    }
+    
+    public GenericFlightDao getGenericFlightDao() {
+        return new MySqlGenericFlightDao(this);
     }
 
     @Override

@@ -5,7 +5,6 @@
  */
 package es.cifpcm.queenair.interfaces;
 
-import es.cifpcm.queenair.pojos.Flight;
 import es.cifpcm.queenair.pojos.GenericFlight;
 import java.util.List;
 
@@ -13,7 +12,6 @@ import java.util.List;
  *
  * @author macar
  */
-public interface FlightDao {
-    List<Flight> find(GenericFlight genericFlight);
-    Flight select(Flight Flight);
+public interface GenericFlightDao {
+    List<GenericFlight> find(GenericFlight genericFlight);
 }

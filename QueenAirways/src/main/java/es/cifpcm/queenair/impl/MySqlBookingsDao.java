@@ -5,18 +5,23 @@
  */
 package es.cifpcm.queenair.impl;
 
-import es.cifpcm.queenair.connection.DaoFactory;
+import es.cifpcm.queenair.connection.ConnectionProvider;
 import es.cifpcm.queenair.interfaces.BookingsDao;
 import es.cifpcm.queenair.pojos.Bookings;
+import java.sql.Connection;
 
 /**
  *
  * @author macar
  */
 public class MySqlBookingsDao implements BookingsDao {
-
-    public MySqlBookingsDao(DaoFactory aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    ConnectionProvider provider;
+    Connection con;
+    
+    public MySqlBookingsDao(ConnectionProvider aThis) {
+        this.provider = aThis;
+        this.con = provider.getConnection();
     }
 
     @Override
