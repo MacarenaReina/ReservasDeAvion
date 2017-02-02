@@ -1,0 +1,26 @@
+  body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+  }
+  
+  main {
+      flex: 1 0 auto;
+  }
+
+  .container{
+      margin-top: 3%;
+  }
+  
+  #div_page1 {
+      background: slateblue;
+      height: 80vh;
+  }
+  
+  #div_menu {
+      height: 80vh;
+  }
+
+  #btnSearch{
+      width: 100%;
+  }
