@@ -1,179 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-        <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" />
-        <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.css">
-        <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
-        <link type="text/css" rel="stylesheet" href="css/main.css" />
-        <title>AirQueen</title>
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css" />
+  <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.css">
+  <link type="text/css" rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <title>QueenAirways</title>
+</head>
 
-    <body>
-        <header>
-            <!-- Menu Navegacion -->
-            <nav class="red lighten-2" role="navigation">
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo center">Air</a>
-                    <a class="button-collapse" data-activates="nav_mobile" href="#">
-                        <i class="material-icons">menu</i>
-                    </a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a class="dropdown-button" data-activates="menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
-                            <ul id="menu_language" class="dropdown-content">
-                                <li><a href="#">Español</a></li>
-                                <li><a href="#">Inglés</a></li>
-                                <li><a href="#">Francés</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul id="nav_mobile" class="side-nav">
-                        <li>
-                            <a class="dropdown-button" data-activates="mobile_menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
-                            <ul id="mobile_menu_language" class="dropdown-content">
-                                <li><a href="#">Español</a></li>
-                                <li><a href="#">Inglés</a></li>
-                                <li><a href="#">Francés</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <!-- Fin Menu Navegacion -->
-        <!-- Parallax Container 1 -->
-        <div class="parallax-container">
-            <div class="parallax">
-                <img src="images/56d1nt0dxhk-arnold-lee.jpg">
+<body>
+  <header>
+    <!-- Menu Navegacion -->
+    <nav class="red lighten-2" role="navigation">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center"> <i class="large material-icons"> airplanemode_active</i> QueenAirways
+        </a>
+        <a class="button-collapse" data-activates="nav_mobile" href="#">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class="dropdown-button" data-activates="menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
+            <ul id="menu_language" class="dropdown-content">
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Inglés</a></li>
+              <li><a href="#">Francés</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul id="nav_mobile" class="side-nav">
+          <li>
+            <a class="dropdown-button" data-activates="mobile_menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
+            <ul id="mobile_menu_language" class="dropdown-content">
+              <li><a href="#">Español</a></li>
+              <li><a href="#">Inglés</a></li>
+              <li><a href="#">Francés</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Fin Menu Navegacion -->
+  <!-- Parallax Container 1 -->
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="images/56d1nt0dxhk-arnold-lee.jpg">
+    </div>
+  </div>
+  <!-- Fin Parallax Container 1 -->
+  <!-- Contenedor -->
+  <div class="container" id="middle">
+    <!-- DIV BUSQUEDA VUELOS -->
+    <div class="row">
+      <form>
+        <div class="div_menu col s12 l3 m6">
+          <h3 class="center">Búsqueda de vuelos</h3>
+          <div class="row">
+            <div class="col s12 col l12 m12">
+              <label for="rangePrice">Precio</label>
+              <input type="text" id="rangePrice" value="" name="range" />
             </div>
+          </div>
+          <!-- Input Salida -->
+          <div class="row">
+            <div class="col s12 m4 l4">
+              <label for="">Salida </label>
+              <input type="number" />
+            </div>
+          </div>
+          <!-- Input Llegada -->
+          <div class="row">
+            <div class="col s12 m4 l4">
+              <label for="">Llegada</label>
+              <input type="number" />
+            </div>
+          </div>
+          <!-- Group RadioButton Aerolineas -->
+          <div class="row">
+            <h5 class="center">Aerolíneas</h5>
+            <div class="col s12 m12 l12">
+              <input name="groupCompany" type="radio" id="testIberia" />
+              <label for="testIberia">Iberia</label>
+            </div>
+            <div class="col s12 m12 l12">
+              <input name="groupCompany" type="radio" id="testRyanair" />
+              <label for="testRyanair">Ryanair</label>
+            </div>
+            <div class="col s12 m12 l12">
+              <input name="groupCompany" type="radio" id="testNorwegian" />
+              <label for="testNorwegian">Norwegian</label>
+            </div>
+            <div class="col s12 m12 l12">
+              <input name="groupCompany" type="radio" id="testAirEuropa" />
+              <label for="testAirEuroa">Air Europa</label>
+            </div>
+            <div class="col s12 m12 l12">
+              <input name="groupCompany" type="radio" id="testBinterCanarias" />
+              <label for="testBinterCanarias">Binter Canarias</label>
+            </div>
+            <div class="col s12 m12 l12">
+              <input name="groupCompany" type="radio" id="testCanaryFly" />
+              <label for="testCanaryFly">Canary Fly</label>
+            </div>
+          </div>
+          <div class="row">
+            <a class="waves-effect waves-light btn" id="btnSearch"><i class="material-icons right">search</i>Buscar</a>
+          </div>
+      </form>
+      </div>
+      <!-- FIND DIV BUSQUEDA VUELOS -->
+      <!-- DIV RESULTADOS BUSQUEDA -->
+      <!--
+      <div class="row">
+        <div class="div_page1 col l8 m8 s12" id="page1">
+          <h3 class="center">Bienvenidos a QueenAirways</h3>
+          <div class="row">
+            <div class="col s12 l3 m3">
+              <img src="images/image1.jpg" style="width: 100%;" />
+            </div>
+            <div class="col s12 l3 m3">
+              <img src="images/image2.jpg" />
+            </div>
+            <div class="col s12 l3 m3">
+              <img src="images/image3.jpg" />
+            </div>
+            <div class="col s12 l3 m3">
+              <img src="images/image4.jpg" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12 m12 l12">
+              <p><i class="tiny material-icons">label</i> Consulta de vuelos con billetes disponibles</p>
+
+            </div>
+            <div class="col s12 m12 l12">
+              <p><i class="tiny material-icons">label</i> Reserva de billetes</p>
+            </div>
+          </div>
         </div>
-        <!-- Fin Parallax Container 1 -->
-        <!-- Contenedor -->
-        <div class="container" id="middle">
-            <!-- DIV BUSQUEDA VUELOS -->
-            <div class="row">
-                <form>
-                    <div class="div_menu col s12 l3 m6">
-                        <h3 class="center">Búsqueda de vuelos</h3>
-                        <div class="row">
-                            <div class="col s12 col l12 m12">
-                                <label for="rangePrice">Precio</label>
-                                <input type="text" id="rangePrice" value="" name="range" />
-                            </div>
-                        </div>
-                        <!-- Input Salida -->
-                        <div class="row">
-                            <div class="col s12 m4 l4">
-                                <label for="txtSalida">Salida</label>
-                                <input type="number">
-                            </div>
-                        </div>
-                        <!-- Input Llegada -->
-                        <div class="row">
-                            <div class="col s12 m4 l4">
-                                <label for="txtLlegada">Llegada</label>
-                                <input type="number">
-                            </div>
-                        </div>
-                        <!-- Group RadioButton Aerolineas -->
-                        <div class="row">
-                            <h5 class="center">Aerolíneas</h5>
-                            <div class="col s12 m12 l12">
-                                <input name="groupCompany" type="radio" id="testIberia" />
-                                <label for="testIberia">Iberia</label>
-                            </div>
-                            <div class="col s12 m12 l12">
-                                <input name="groupCompany" type="radio" id="testRyanair" />
-                                <label for="testRyanair">Ryanair</label>
-                            </div>
-                            <div class="col s12 m12 l12">
-                                <input name="groupCompany" type="radio" id="testNorwegian" />
-                                <label for="testNorwegian">Norwegian</label>
-                            </div>
-                            <div class="col s12 m12 l12">
-                                <input name="groupCompany" type="radio" id="testAirEuropa" />
-                                <label for="testAirEuroa">Air Europa</label>
-                            </div>
-                            <div class="col s12 m12 l12">
-                                <input name="groupCompany" type="radio" id="testBinterCanarias" />
-                                <label for="testBinterCanarias">Binter Canarias</label>
-                            </div>
-                            <div class="col s12 m12 l12">
-                                <input name="groupCompany" type="radio" id="testCanaryFly" />
-                                <label for="testCanaryFly">Canary Fly</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col s6 m10 l4 offset-s3">
-                                <a id="btnSearch" class="waves-effect waves-light btn"><i class="material-icons left">search</i>Buscar</a>
-                            </div>
-                        </div>
-                </form>
-            </div>
-            <!-- FIND DIV BUSQUEDA VUELOS -->
-            <!-- DIV RESULTADOS BUSQUEDA -->
-            <!--<div class="row">
-              <div class="div_page1 col l8 m8 s12" id="page1">
-                <h3>Bienvenidos a AirTami</h3>
-                <div class="row">
-                  <div class="col s12 l3 m3">
-                    <img src="images/image1.jpg" style="width: 100%;" />
-                  </div>
-                  <div class="col s12 l3 m3">
-                    <img src="images/image2.jpg" />
-                  </div>
-                  <div class="col s12 l3 m3">
-                    <img src="images/image3.jpg" />
-                  </div>
-                  <div class="col s12 l3 m3">
-                    <img src="images/image4.jpg" />
+      </div>-->
+      <!-- FIN DIV RESULTADOS -->
+      <!--SEGUNDA PÁGINA-->
+      <!--<div class="row">
+        <div class="col s12 m8 l8 div_page2 " id="page2">
+          <div class="col s12 m5 l5">
+            <p><strong>Salida:</strong> 13:55 - Tenerife Norte</p>
+            <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
+          </div>
+          <div class="col s12 m5 l5">
+            <p><strong>Vuelo: </strong>IB2345 - IBERIA</p>
+            <p><strong>500€</strong>
+          </div>
+          <div class="col s12 m2 l2">
+            <input class="with-gap" name="gRadio" type="radio" id="rSelected" />
+            <label for="rSelected">Seleccionar</label>
+          </div>
+        </div>
+        <div class="col s12 m8 l8 div_page2 " id="page2">
+          <div class="col s12 m5 l5">
+            <p><strong>Salida:</strong> 13:55 - Tenerife Norte</p>
+            <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
+          </div>
+          <div class="col s12 m5 l5">
+            <p><strong>Vuelo: </strong>IB2345 - IBERIA</p>
+            <p><strong>500€</strong>
+          </div>
+          <div class="col s12 m2 l2">
+            <input class="with-gap" name="gRadio" type="radio" id="rSelected1" />
+            <label for="rSelected1">Seleccionar</label>
+          </div>
+        </div>
+        <div class="col s12 m8 l8 div_page2 " id="page2">
+          <div class="col s12 m5 l5">
+            <p><strong>Salida:</strong> 13:55 - Tenerife Norte</p>
+            <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
+          </div>
+          <div class="col s12 m5 l5">
+            <p><strong>Vuelo: </strong>IB2345 - IBERIA</p>
+            <p><strong>500€</strong>
+          </div>
+          <div class="col s12 m2 l2">
+            <input class="with-gap" name="gRadio" type="radio" id="rSelected2" />
+            <label for="rSelected2">Seleccionar</label>
+          </div>
+        </div>
+        <div class="col s12 m8 l8 div_page2 " id="page2">
+          <div class="col s12 m5 l5">
+            <p><strong>Salida:</strong> 13:55 - Tenerife Norte</p>
+            <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
+          </div>
+          <div class="col s12 m5 l5">
+            <p><strong>Vuelo: </strong>IB2345 - IBERIA</p>
+            <p><strong>500€</strong>
+          </div>
+          <div class="col s12 m2 l2">
+            <input class="with-gap" name="gRadio" type="radio" id="rSelected3" />
+            <label for="rSelected3">Seleccionar</label>
+          </div>
+        </div>
+        <div class="col s12 m8 l8 div_page2 " id="page2">
+          <div class="col s12 m5 l5">
+            <p><strong>Salida:</strong> 13:55 - Tenerife Norte</p>
+            <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
+          </div>
+          <div class="col s12 m5 l5">
+            <p><strong>Vuelo: </strong>IB2345 - IBERIA</p>
+            <p><strong>500€</strong>
+          </div>
+          <div class="col s12 m2 l2">
+            <input class="with-gap" name="gRadio" type="radio" id="rSelected4" />
+            <label for="rSelected4">Seleccionar</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+      <!--FIN DE LA SEGUNDA PÁGINA-->
+      <!--TERCERA PÁGINA-->
+      <div class="row">
+        <div class="col s12 m8 l8 div_page3 " id="page3">
+          <div class="col s12 m12 l12">
+            <h6>Seleccione la fecha que desee</h6>
+            <p> <input name="gDate" type="radio" id="rDate1" />
+              <label for="rDate1">Red</label>
+            </p>
+            <p> <input name="gDate" type="radio" id="rDate2" />
+              <label for="rDate2">Red</label>
+            </p>
+            <p> <input name="gDate" type="radio" id="rDate3" />
+              <label for="rDate3">Red</label>
+            </p>
+            <p> <input name="gDate" type="radio" id="rDate4" />
+              <label for="rDate4">Red</label>
+            </p>
+            <hr/>
+          </div>
+          <div class="col s12 m12 l12 ">
+            <form>
+              <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">account_circle</i>
+                <input id="first_name" type="text">
+                <label for="first_name">Nombre</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <input id="last_name" type="text">
+                <label for="last_name">Apellidos</label>
+              </div>
+              <div class="input-field col col s12 m6 l6">
+                <i class="material-icons prefix">phone</i>
+                <input id="telephone" type="text">
+                <label for="telephone">Teléfono</label>
+              </div>
+              <div class="input-field col s12 m6 l6">
+                <i class="material-icons prefix">credit_card</i>
+                <input id="card" type="text">
+                <label for="card">Tarjeta de crédito</label>
+              </div>
+              <!--DETALLES DE LA RESERVA-->
+              <hr>
+              <div class="col s12 m12 l12">
+                <h6>Detalles de la reserva</h6>
+                <div class="col s12 m8 l8">
+                  <label for="">Fecha</label>
+                  <p>12 de Febrero 2017</p>
+                </div>
+                <div class="col s12 m8 l8">
+                  <label for="">Total</label>
+                  <h6>500€</h6>
+                </div>
+                <div class="col s12 m12 l12">
+                  <div class="col s12  offset-m1 offset-l4 ">
+                    <a class="waves-effect waves-light btn btnReserva">Reservar</a>
+                    <a class="waves-effect waves-light btn btnReserva">Cancelar</a>
                   </div>
                 </div>
               </div>
-            </div>-->
-            <!-- FIN DIV RESULTADOS -->
-            <!--SEGUNDA PÁGINA-->
-            <div class="row">
-                <div class="div_page2 col 18 m8 s12" id="page2">
-                    <div class="col-sm-4 col-md-4 col-lg-4">
-                        <div class="input-group form-group">
-                            <p>Salida: 13:55 - Tenerife Norte</p>
-                            <p>Llegada: 20:00 - Barcelona, El Prat</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <!--FIN DE DETALLES DE LA RESERVA-->
+            </form>
+          </div>
         </div>
-        <!--FIN DE LA SEGUNDA PÁGINA-->
+      </div>
     </div>
-</div>
-<!-- FIN DIV CONTAINER -->
-<footer class="page-footer">
+  </div>
+  <!-- FIN DIV CONTAINER -->
+  <footer class="page-footer">
     <div class="container">
-        <div class="row">
-            <div class="col l12 s12 m12">
-            </div>
+      <div class="row">
+        <div class="col l12 s12 m12">
         </div>
+      </div>
     </div>
     <div class="footer-copyright">
-        <div class="container">
-            © 2017
-        </div>
+      <div class="container">
+        © 2017
+      </div>
     </div>
-</footer>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script type="text/javascript" src="js/ion.rangeSlider.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
+  </footer>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/ion.rangeSlider.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
