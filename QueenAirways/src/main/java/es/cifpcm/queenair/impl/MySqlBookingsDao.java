@@ -19,14 +19,35 @@ public class MySqlBookingsDao implements BookingsDao {
     ConnectionProvider provider;
     Connection con;
     
+    private final static org.slf4j.Logger LOGGER = LoggerFactory.getLogger(MySqlGenericFlightDao.class);
+    
     public MySqlBookingsDao(ConnectionProvider aThis) {
         this.provider = aThis;
         this.con = provider.getConnection();
     }
 
     @Override
-    public void insert(Bookings booking) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Bookings insert(Bookings booking) {
+        String query = "INSERT INTO bookings (name, surname, phone, credit_card, amount, flight) VALUES (?,?,?,?,?,?)";
+        
+        try(PreparedStatement st = con.prepareStatement(query)) {
+            st.setString(1, booking.getName());
+            st.setString(2, booking.getSurname());
+            st.setString(3, booking.getPhone());
+            st.setString(4, booking.getCreditCard());
+            st.setFloat(5, booking.getAmount());
+            st.setInt(6, booking.getFlight().getGenericFlight().getFlightNumber());
+            
+            int resul = st.executeUpdate();
+            if(resul == 0) {
+                booking = null;
+            }
+        } catch (SQLException ex) {
+            LOGGER.error("****** Error al insertar la reserva --> "+ex+" ******");
+            booking = null;
+        }
+        
+        return booking;
     }
     
 }
