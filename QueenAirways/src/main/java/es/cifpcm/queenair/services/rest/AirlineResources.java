@@ -7,12 +7,9 @@ package es.cifpcm.queenair.services.rest;
 
 import es.cifpcm.queenair.connection.DaoFactory;
 import es.cifpcm.queenair.pojos.Airline;
-import es.cifpcm.queenair.pojos.Flight;
-import es.cifpcm.queenair.pojos.GenericFlight;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;

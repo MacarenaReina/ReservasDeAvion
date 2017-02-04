@@ -29,6 +29,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        resources.add(es.cifpcm.queenair.languages.LanguageResources.class);
         resources.add(es.cifpcm.queenair.services.rest.AirlineResources.class);
         resources.add(es.cifpcm.queenair.services.rest.BookingResources.class);
         resources.add(es.cifpcm.queenair.services.rest.FlightResources.class);
