@@ -5,9 +5,11 @@
  */
 package es.cifpcm.queenair.connection;
 
+import es.cifpcm.queenair.impl.MySqlAirlineDao;
 import es.cifpcm.queenair.impl.MySqlBookingsDao;
 import es.cifpcm.queenair.impl.MySqlFlightDao;
 import es.cifpcm.queenair.impl.MySqlGenericFlightDao;
+import es.cifpcm.queenair.interfaces.AirlineDao;
 import es.cifpcm.queenair.interfaces.BookingsDao;
 import es.cifpcm.queenair.interfaces.FlightDao;
 import es.cifpcm.queenair.interfaces.GenericFlightDao;

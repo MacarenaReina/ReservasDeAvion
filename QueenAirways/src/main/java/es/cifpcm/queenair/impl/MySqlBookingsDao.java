@@ -9,6 +9,9 @@ import es.cifpcm.queenair.connection.ConnectionProvider;
 import es.cifpcm.queenair.interfaces.BookingsDao;
 import es.cifpcm.queenair.pojos.Bookings;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import org.slf4j.LoggerFactory;
 
 /**
  *
