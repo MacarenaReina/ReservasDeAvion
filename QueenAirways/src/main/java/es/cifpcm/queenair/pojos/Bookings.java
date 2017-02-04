@@ -16,6 +16,7 @@ public class Bookings implements Serializable {
     private String name;
     private String surname;
     private String phone;
+    private String creditCard;
     private Float amount;
     private Flight flight;
 
@@ -52,6 +53,14 @@ public class Bookings implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+    
+    public String getCreditCard() {
+        return creditCard;
+    }
+
+    public void setCreditCard(String creditCard) {
+        this.creditCard = creditCard;
     }
 
     public Float getAmount() {

@@ -60,6 +60,10 @@ public class DaoFactory implements ConnectionProvider {
     public GenericFlightDao getGenericFlightDao() {
         return new MySqlGenericFlightDao(this);
     }
+    
+    public AirlineDao getAirlineDao() {
+        return new MySqlAirlineDao(this);
+    }
 
     @Override
     public Connection getConnection() {

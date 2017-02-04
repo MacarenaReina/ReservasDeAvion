@@ -68,7 +68,7 @@ CREATE TABLE generic_flight(
     destination varchar(10) NOT NULL,
     airline varchar(10),
     PRIMARY KEY (flight_number),
-	FOREIGN KEY (origin) REFERENCES airport(id),
+    FOREIGN KEY (origin) REFERENCES airport(id),
     FOREIGN KEY (destination) REFERENCES airport(id),
     FOREIGN KEY (airline) REFERENCES airline(id)
 );
@@ -88,10 +88,10 @@ CREATE TABLE flight(
     PRIMARY KEY (generic_flight)
 );
 
-INSERT INTO flight VALUES (STR_TO_DATE("20/01/2017", "%d/%m/%Y"), "10", 1);
-INSERT INTO flight VALUES (STR_TO_DATE("02/09/2016", "%d/%m/%Y"), "5", 2);
-INSERT INTO flight VALUES (STR_TO_DATE("10/11/2016", "%d/%m/%Y"), "28", 3);
-INSERT INTO flight VALUES (STR_TO_DATE("30/03/2017", "%d/%m/%Y"), "50", 4);
+INSERT INTO flight VALUES (STR_TO_DATE("20/01/2017", "%d/%m/%Y"), 10, 1);
+INSERT INTO flight VALUES (STR_TO_DATE("02/09/2016", "%d/%m/%Y"), 5, 2);
+INSERT INTO flight VALUES (STR_TO_DATE("10/11/2016", "%d/%m/%Y"), 28, 3);
+INSERT INTO flight VALUES (STR_TO_DATE("30/03/2017", "%d/%m/%Y"), 50, 4);
 
 
 DROP TABLE IF EXISTS bookings;
@@ -100,13 +100,14 @@ CREATE TABLE bookings(
     name varchar(30) NOT NULL,
     surname varchar(30) NOT NULL,
     phone varchar(9) NOT NULL,
+    credit_card varchar(16) NOT NULL,
     amount float NOT NULL,
     flight integer NOT NULL,
     PRIMARY KEY (num_booking),
     FOREIGN KEY (flight) REFERENCES flight(generic_flight)
 );
 
-INSERT INTO bookings (name, surname, phone, amount, flight) VALUES ("Macarena", "Reina", "666777888", 50, 1);
-INSERT INTO bookings (name, surname, phone, amount, flight) VALUES ("Omar", "Lorenzo", "654321987", 70, 2);
-INSERT INTO bookings (name, surname, phone, amount, flight) VALUES ("Joshua", "Hernández", "666555444", 20, 3);
-INSERT INTO bookings (name, surname, phone, amount, flight) VALUES ("Mónica", "Pérez", "666888777", 10, 4);
+INSERT INTO bookings (name, surname, phone, credit_card, amount, flight) VALUES ("Macarena", "Reina", "666777888", "ABCD123443211234", 50, 1);
+INSERT INTO bookings (name, surname, phone, credit_card, amount, flight) VALUES ("Omar", "Lorenzo", "654321987", "ACCD123443211234", 70, 2);
+INSERT INTO bookings (name, surname, phone, credit_card, amount, flight) VALUES ("Joshua", "Hernández", "666555444", "ABCD123443219876", 20, 3);
+INSERT INTO bookings (name, surname, phone, credit_card, amount, flight) VALUES ("Mónica", "Pérez", "666888777", "ABCDCDEF43211234", 10, 4);

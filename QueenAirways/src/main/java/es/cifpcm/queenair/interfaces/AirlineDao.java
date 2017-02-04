@@ -5,12 +5,13 @@
  */
 package es.cifpcm.queenair.interfaces;
 
-import es.cifpcm.queenair.pojos.Bookings;
+import es.cifpcm.queenair.pojos.Airline;
+import java.util.List;
 
 /**
  *
  * @author macar
  */
-public interface BookingsDao {
-    Bookings insert(Bookings booking);
+public interface AirlineDao {
+    List<Airline> selectAll();
 }
