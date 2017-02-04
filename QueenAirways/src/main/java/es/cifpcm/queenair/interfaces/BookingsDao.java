@@ -12,5 +12,5 @@ import es.cifpcm.queenair.pojos.Bookings;
  * @author macar
  */
 public interface BookingsDao {
-    void insert(Bookings booking);
+    Bookings insert(Bookings booking);
 }
