@@ -28,8 +28,8 @@
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
-            <a class="dropdown-button" data-activates="menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
-            <ul id="menu_language" class="dropdown-content">
+            <a id="language" class="dropdown-button" data-activates="menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
+            <ul id="menu_language" class="dropdown-content" onclick="changeLanguage(event)">
               <li><a href="#" id="language1" name="es_ES">Español</a></li>
               <li><a href="#" id="language2" name="en_UK">Inglés</a></li>
               <li><a href="#" id="language3" name="fr_FR">Francés</a></li>
@@ -38,7 +38,7 @@
         </ul>
         <ul id="nav_mobile" class="side-nav">
           <li>
-            <a class="dropdown-button" data-activates="mobile_menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
+            <a id="language" class="dropdown-button" data-activates="mobile_menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
             <ul id="mobile_menu_language" class="dropdown-content">
               <li><a href="#" id="language1" name="es_ES">Español</a></li>
               <li><a href="#" id="language2" name="en_UK">Inglés</a></li>
@@ -156,7 +156,7 @@
               <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
             </div>
             <div class="col s12 m6 l6">
-              <p><strong id="flight">Vuelo: </strong>IB2345 - IBERIA</p>
+              <p><strong id="flight">Vuelo: </strong> IB2345 - IBERIA</p>
               <p><strong>500€</strong>
             </div>
           </div>
@@ -247,13 +247,13 @@
                 <!--DETALLES DE LA RESERVA-->
                 <hr>
                 <div class="col s12 m12 l12">
-                  <h6>Detalles de la reserva</h6>
+                  <h6 id="bookDetails">Detalles de la reserva</h6>
                   <div class="col s12 m8 l8">
-                    <label>Fecha</label>
+                    <label id="bookDay">Fecha</label>
                     <p id="bookDate">12 de Febrero 2017</p>
                   </div>
                   <div class="col s12 m8 l8">
-                    <label>Total</label>
+                    <label id="total">Total</label>
                     <h6 id="bookPrice">500€</h6>
                   </div>
                   <div class="col s12 m12 l12">
@@ -293,6 +293,7 @@
   <script type="text/javascript" src="js/design.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/validation.js"></script>
+  <script type="text/javascript" src="js/languages.js"></script>
 </body>
 
 </html>

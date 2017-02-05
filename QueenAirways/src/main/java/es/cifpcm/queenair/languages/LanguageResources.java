@@ -27,7 +27,7 @@ import org.slf4j.LoggerFactory;
 public class LanguageResources {
     private final Logger LOGGER = LoggerFactory.getLogger(GenericFlightResources.class);
     private static List<Language> ids;
-    private ResourceBundle rb;
+    private ResourceBundle rb = ResourceBundle.getBundle("Message_Bundle", new Locale("es", "ES"));
     
     static {
         ids = new ArrayList<>();
@@ -40,11 +40,8 @@ public class LanguageResources {
     }
     
     @POST
-    @Produces({MediaType.APPLICATION_JSON})
-    public void insert(List<Language> elements) {
-//        rb = ResourceBundle.getBundle("Message_Bundle", new Locale("es", "ES"));
-//        ResourceBundle rb = ResourceBundle.getBundle("Message_Bundle", new Locale("en", "UK"));
-//        ResourceBundle rb = ResourceBundle.getBundle("Message_Bundle", new Locale("fr", "FR"));
+    public void set(Language language) {
+        rb = ResourceBundle.getBundle("Message_Bundle", new Locale(language.getKey(), language.getValue()));
         Enumeration e = rb.getKeys();
         
         while(e.hasMoreElements()) {
@@ -55,24 +52,5 @@ public class LanguageResources {
             
             ids.add(l);
         }
-        
-//        for(int i=0;i<elements.size();i++) {
-//            String key = elements.get(i).getKey();
-//            String value = rb.getString(key);
-//            
-//            Language l = new Language();
-//            l.setKey(key);
-//            l.setValue(value);
-//            
-//            ids.add(l);
-//        }
-    }
-    
-    @POST
-    @Path("setLanguage")
-    public void set(String language) {
-        String[] languageArray = language.split("_");
-        rb = ResourceBundle.getBundle("Message_Bundle", new Locale(languageArray[0], languageArray[1]));
-//        rb = ResourceBundle.getBundle("Message_Bundle", new Locale("es", "ES"));
     }
 }
