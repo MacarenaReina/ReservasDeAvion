@@ -5,7 +5,7 @@ $(document).ready(function(){
     });
 
     $('.row_page_2').children().click(function(e){
-        $(".row_page_2").hide('slow');
+        $(".row_page_2").parent().hide('slow');
         $(".div_page3").show('slow');
     });
 });
