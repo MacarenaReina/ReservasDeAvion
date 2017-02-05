@@ -39,7 +39,7 @@
         <ul id="nav_mobile" class="side-nav">
           <li>
             <a id="language" class="dropdown-button" data-activates="mobile_menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
-            <ul id="mobile_menu_language" class="dropdown-content">
+            <ul id="mobile_menu_language" class="dropdown-content" onclick="changeLanguage(event)">
               <li><a href="#" id="language1" name="es_ES">Español</a></li>
               <li><a href="#" id="language2" name="en_UK">Inglés</a></li>
               <li><a href="#" id="language3" name="fr_FR">Francés</a></li>
@@ -85,8 +85,8 @@
             </div>
           </div>
           <!-- Group RadioButton Aerolineas -->
-          <div class="row">
-            <h5 id="airWays" class="center">Aerolíneas</h5>
+          <h5 id="airWays" class="center">Aerolíneas</h5>
+          <div id="airlines" class="row">
             <div class="col s12 m12 l12">
               <input name="groupCompany" type="radio" id="testIberia" />
               <label for="testIberia">Iberia</label>
@@ -294,6 +294,7 @@
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/validation.js"></script>
   <script type="text/javascript" src="js/languages.js"></script>
+  <script type="text/javascript" src="js/airlines.js"></script>
 </body>
 
 </html>
