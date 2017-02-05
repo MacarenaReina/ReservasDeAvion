@@ -30,9 +30,9 @@
           <li>
             <a class="dropdown-button" data-activates="menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
             <ul id="menu_language" class="dropdown-content">
-              <li><a href="#">Español</a></li>
-              <li><a href="#">Inglés</a></li>
-              <li><a href="#">Francés</a></li>
+              <li><a href="#" id="language1" name="es_ES">Español</a></li>
+              <li><a href="#" id="language2" name="en_UK">Inglés</a></li>
+              <li><a href="#" id="language3" name="fr_FR">Francés</a></li>
             </ul>
           </li>
         </ul>
@@ -40,9 +40,9 @@
           <li>
             <a class="dropdown-button" data-activates="mobile_menu_language" data-beloworigin="true" href="#">Idiomas<i class="material-icons right">arrow_drop_down</i></a>
             <ul id="mobile_menu_language" class="dropdown-content">
-              <li><a href="#">Español</a></li>
-              <li><a href="#">Inglés</a></li>
-              <li><a href="#">Francés</a></li>
+              <li><a href="#" id="language1" name="es_ES">Español</a></li>
+              <li><a href="#" id="language2" name="en_UK">Inglés</a></li>
+              <li><a href="#" id="language3" name="fr_FR">Francés</a></li>
             </ul>
           </li>
         </ul>
@@ -63,30 +63,30 @@
     <div class="row">
       <form>
         <div class="div_menu col s12 l3 m6">
-          <h3 class="center">Búsqueda de vuelos</h3>
+          <h3 id="search" class="center">Búsqueda de vuelos</h3>
           <div class="row">
             <div class="col s12 col l12 m12">
-              <label for="rangePrice">Precio</label>
+              <label id="maxCost" for="rangePrice">Precio</label>
               <input type="text" id="rangePrice" value="" name="range" />
             </div>
           </div>
           <!-- Input Salida -->
           <div class="row">
             <div class="col s12 m4 l4">
-              <label for="">Salida </label>
-              <input type="number" />
+              <label id="departure" for="departureTxt">Salida </label>
+              <input id="departureTxt" type="number" />
             </div>
           </div>
           <!-- Input Llegada -->
           <div class="row">
             <div class="col s12 m4 l4">
-              <label for="">Llegada</label>
-              <input type="number" />
+              <label id="arrival" for="arrivalTxt">Llegada</label>
+              <input id="arrivalTxt" type="number" />
             </div>
           </div>
           <!-- Group RadioButton Aerolineas -->
           <div class="row">
-            <h5 class="center">Aerolíneas</h5>
+            <h5 id="airWays" class="center">Aerolíneas</h5>
             <div class="col s12 m12 l12">
               <input name="groupCompany" type="radio" id="testIberia" />
               <label for="testIberia">Iberia</label>
@@ -101,7 +101,7 @@
             </div>
             <div class="col s12 m12 l12">
               <input name="groupCompany" type="radio" id="testAirEuropa" />
-              <label for="testAirEuroa">Air Europa</label>
+              <label for="testAirEuropa">Air Europa</label>
             </div>
             <div class="col s12 m12 l12">
               <input name="groupCompany" type="radio" id="testBinterCanarias" />
@@ -115,13 +115,13 @@
           <div class="row">
             <a class="waves-effect waves-light btn" id="btnSearch"><i class="material-icons right">search</i>Buscar</a>
           </div>
+        </div>
       </form>
-      </div>
       <!-- FIND DIV BUSQUEDA VUELOS -->
       <!-- DIV RESULTADOS BUSQUEDA -->
       <div class="row">
         <div class="div_page1 col l8 m8 s12" id="page1">
-          <h3 class="center">Bienvenidos a QueenAirways</h3>
+          <h3 id="welcome" class="center">Bienvenidos a QueenAirways</h3>
           <div class="row">
             <div class="col s12 l3 m3">
               <img src="images/image1.jpg" style="width: 100%;" />
@@ -138,10 +138,10 @@
           </div>
           <div class="row">
             <div class="col s12 m12 l12">
-              <p><i class="tiny material-icons">label</i> Consulta de vuelos con billetes disponibles</p>
+                <p><i class="tiny material-icons">label</i><span id="query">Consulta de vuelos con billetes disponibles</span></p>
             </div>
             <div class="col s12 m12 l12">
-              <p><i class="tiny material-icons">label</i> Reserva de billetes</p>
+                <p><i class="tiny material-icons">label</i><span id="booking">Reserva de billetes</span></p>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
               <p><strong>Llegada:</strong> 20:00 - Barcelona, El Prat</p>
             </div>
             <div class="col s12 m6 l6">
-              <p><strong>Vuelo: </strong>IB2345 - IBERIA</p>
+              <p><strong id="flight">Vuelo: </strong>IB2345 - IBERIA</p>
               <p><strong>500€</strong>
             </div>
           </div>
@@ -208,7 +208,7 @@
         <div class="row_page_3">
           <div class="col s12 m8 l8 div_page3 " id="page3">
             <div class="col s12 m12 l12">
-              <h6>Seleccione la fecha que desee</h6>
+              <h6 id="date">Seleccione la fecha que desee</h6>
               <p> <input name="gDate" type="radio" id="rDate1" />
                 <label for="rDate1">Red</label>
               </p>
@@ -228,38 +228,38 @@
                 <div class="input-field col s12 m6 l6">
                   <i class="material-icons prefix">account_circle</i>
                   <input id="first_name" type="text">
-                  <label for="first_name">Nombre</label>
+                  <label id="firstName" for="first_name">Nombre</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
                   <input id="last_name" type="text">
-                  <label for="last_name">Apellidos</label>
+                  <label id="lastName" for="last_name">Apellidos</label>
                 </div>
                 <div class="input-field col col s12 m6 l6">
                   <i class="material-icons prefix">phone</i>
                   <input id="telephone" type="text">
-                  <label for="telephone">Teléfono</label>
+                  <label id="tlf" for="telephone">Teléfono</label>
                 </div>
                 <div class="input-field col s12 m6 l6">
                   <i class="material-icons prefix">credit_card</i>
                   <input id="card" type="text">
-                  <label for="card">Tarjeta de crédito</label>
+                  <label id="creditCard" for="card">Tarjeta de crédito</label>
                 </div>
                 <!--DETALLES DE LA RESERVA-->
                 <hr>
                 <div class="col s12 m12 l12">
                   <h6>Detalles de la reserva</h6>
                   <div class="col s12 m8 l8">
-                    <label for="">Fecha</label>
-                    <p>12 de Febrero 2017</p>
+                    <label>Fecha</label>
+                    <p id="bookDate">12 de Febrero 2017</p>
                   </div>
                   <div class="col s12 m8 l8">
-                    <label for="">Total</label>
-                    <h6>500€</h6>
+                    <label>Total</label>
+                    <h6 id="bookPrice">500€</h6>
                   </div>
                   <div class="col s12 m12 l12">
                     <div class="col s12  offset-m1 offset-l4 ">
-                      <a class="waves-effect waves-light btn btnReserva">Reservar</a>
-                      <a class="waves-effect waves-light btn btnReserva">Cancelar</a>
+                      <a id="done" class="waves-effect waves-light btn btnReserva">Reservar</a>
+                      <a id="cancel" class="waves-effect waves-light btn btnReserva">Cancelar</a>
                     </div>
                   </div>
                 </div>
