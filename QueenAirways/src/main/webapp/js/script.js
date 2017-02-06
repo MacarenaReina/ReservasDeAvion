@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    
+      toastr.options = {
+      "closeButton": false,
+      "debug": false,
+      "newestOnTop": false,
+      "progressBar": false,
+      "positionClass": "toast-top-right",
+      "preventDuplicates": false,
+      "onclick": null,
+      "showDuration": "300",
+      "hideDuration": "1000",
+      "timeOut": "5000",
+      "extendedTimeOut": "1000",
+      "showEasing": "swing",
+      "hideEasing": "linear",
+      "showMethod": "fadeIn",
+      "hideMethod": "fadeOut"
+    };
+  
     $('#btnSearch').click(function (e) {
         var valueRadio = $('input[name=groupCompany]:checked').val();
         var firstFormBool = true;
@@ -6,12 +25,14 @@ $(document).ready(function () {
          $(':input[type="number"]').each(function () {
             if($.isNumeric($(this).val())==false) {
                 firstFormBool = false;
+                Command: toastr["error"]("Introduzca una fecha ", "Por favor");
             }
         });
         
         if((firstFormBool === false)||(valueRadio === undefined)){
-            return false;
-        
+             Command: toastr["error"]("Seleccione una aerolínea", "Por favor");
+             return false;
+            
         } else {
             $(".div_page1").parent().hide('slow');
             $(".div_page2").show('slow');
@@ -52,17 +73,24 @@ $(document).ready(function () {
         
         var secondFormBool = true;
         
-        if(validateName == false){
+        if(valueRadio === undefined){
             secondFormBool = false;
+            Command: toastr["error"]("Por favor, seleccione una fecha ", "Error");
+        }else if(validateName == false){
+            secondFormBool = false;
+            Command: toastr["error"]("Por favor, introduzca un nombre correcto - Sin números ", "Error");
         }else if(validateLName == false){
             secondFormBool = false;
+            Command: toastr["error"]("Por favor, introduzca sus apellidos correctamente - Sin números ", "Error");
         }else if(validateTLF == false){
             secondFormBool = false;
+            Command: toastr["error"]("Por favor, introduzca un número correcto Ej: 34+685598157", "Error");
         }else if(validateCard == false){
             secondFormBool = false;
+            Command: toastr["error"]("Por favor, introduzca una tarjeta de crédito correcta - Mastercard - 5105105105105100 ", "Error");
         }
          
-        if((secondFormBool == false)||(valueRadio === undefined)){
+        if(secondFormBool == false){
             alert("nanai");
         }else{
             alert("todo ok");
