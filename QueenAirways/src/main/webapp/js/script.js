@@ -25,12 +25,12 @@ $(document).ready(function () {
          $(':input[type="number"]').each(function () {
             if($.isNumeric($(this).val())==false) {
                 firstFormBool = false;
-                Command: toastr["error"]("Introduzca una fecha ", "Por favor");
+                Command: toastr["error"]("Introduzca una fecha ");
             }
         });
         
         if((firstFormBool === false)||(valueRadio === undefined)){
-             Command: toastr["error"]("Seleccione una aerolínea", "Por favor");
+             Command: toastr["error"]("Seleccione una aerolínea");
              return false;
             
         } else {
@@ -44,7 +44,7 @@ $(document).ready(function () {
         $(".div_page3").show('slow');
     });
     
-    $('#btnReserva').click(function (e){
+    $('#done').click(function (e){
         
         var valueRadio = $('input[name=gDate]:checked').val();
         
@@ -75,19 +75,19 @@ $(document).ready(function () {
         
         if(valueRadio === undefined){
             secondFormBool = false;
-            Command: toastr["error"]("Por favor, seleccione una fecha ", "Error");
+            Command: toastr["error"]("Por favor, seleccione una fecha ");
         }else if(validateName == false){
             secondFormBool = false;
-            Command: toastr["error"]("Por favor, introduzca un nombre correcto - Sin números ", "Error");
+            Command: toastr["error"]("Por favor, introduzca un nombre correcto - Sin números ");
         }else if(validateLName == false){
             secondFormBool = false;
-            Command: toastr["error"]("Por favor, introduzca sus apellidos correctamente - Sin números ", "Error");
+            Command: toastr["error"]("Por favor, introduzca sus apellidos correctamente - Sin números ");
         }else if(validateTLF == false){
             secondFormBool = false;
-            Command: toastr["error"]("Por favor, introduzca un número correcto Ej: 34+685598157", "Error");
+            Command: toastr["error"]("Por favor, introduzca un número correcto Ej: 34+685598157");
         }else if(validateCard == false){
             secondFormBool = false;
-            Command: toastr["error"]("Por favor, introduzca una tarjeta de crédito correcta - Mastercard - 5105105105105100 ", "Error");
+            Command: toastr["error"]("Por favor, introduzca una tarjeta de crédito correcta - Mastercard - 5105105105105100 ");
         }
          
         if(secondFormBool == false){
